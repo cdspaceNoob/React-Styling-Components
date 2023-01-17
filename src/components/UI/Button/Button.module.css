@@ -1,0 +1,31 @@
+.button {
+  /* 기본적으로 '작은 화면'에서 버튼의 너비는 100% */
+  /* '작은 화면'의 기준은 아래의 mediaQuery에서 설정. */
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #8b005d;
+  color: white;
+  background: #8b005d;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  background: #ac0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+/* 너비가 768px을 넘을 때(큰 화면에서) 다음을 적용한다.  */
+@media (min-width: 768px) {
+  /* mediaQuery 내에 선택자를 추가해야 한다. */
+  .button {
+    width: auto;
+  }
+}
